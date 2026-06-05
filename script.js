@@ -8,7 +8,13 @@ fetch('data.json')
       tableBody.innerHTML = '';
       data.filter(m => m.name.toLowerCase().includes(filter.toLowerCase()))
           .forEach(m => {
-            tableBody.innerHTML += `<tr><td>${m.name}</td><td>${m.role}</td><td>${m.country}</td></tr>`;
+            tableBody.innerHTML += `<tr>
+                <td>${m.name}</td>
+                <td>${m.role}</td>
+                <td>${m.country}</td>
+                <td>${m.interests}</td>
+                <td>${m.status}</td>
+            </tr>`;
           });
     }
 
